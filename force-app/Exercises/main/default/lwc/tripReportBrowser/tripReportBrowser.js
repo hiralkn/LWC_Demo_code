@@ -27,6 +27,7 @@ export default class TripReportBrowser extends LightningElement {
 	];
 
 	tripReports;
+	selectedRecordId=0;
 
 	connectedCallback() {
 		getAll()
@@ -46,6 +47,26 @@ export default class TripReportBrowser extends LightningElement {
 			} 
 		});
 	}
+
+	onBtnNewClick() {
+		this.changeTripReportMode('add');
+	}
+	
+
+	changeTripReportMode(newMode) {
+		let eventDetail = {
+			mode: newMode
+		}
+		if (newMode === 'edit') {
+			eventDetail.Id = this.selectedRecordId;
+		}
+		const evt = new CustomEvent('tripreportmodechange', {
+			detail: eventDetail
+		});
+		this.dispatchEvent(evt);
+		
+	}
+	
 	
 
 }
