@@ -11,6 +11,9 @@ export default class LayoutManager extends LightningElement {
 	viewMode = VIEW_STUDENT_BROWSER;
 	certificationName = '';
 	certificationId = 0;
+	modalHeader = '';
+	modalContent ='';
+
 
 	connectedCallback() {
 		Utils.showToast(
@@ -21,6 +24,18 @@ export default class LayoutManager extends LightningElement {
 			'info'
 		);
 		
+	}
+
+	handleShowModal(event) {
+		this.modalHeader = event.detail.header;
+		this.modalContent = event.detail.content;
+		const modal = this.template.querySelector('c-modal');
+		modal.show();
+	}
+
+	closeModal() {
+		const modal = this.template.querySelector('c-modal');
+		modal.hide();
 	}
 
 	handleNavItemSelected(event) {
