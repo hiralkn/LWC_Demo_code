@@ -13,7 +13,7 @@ export default class LayoutManager extends LightningElement {
 	certificationId = 0;
 	modalHeader = '';
 	modalContent ='';
-
+	loading=true;
 
 	connectedCallback() {
 		Utils.showToast(
@@ -53,6 +53,13 @@ export default class LayoutManager extends LightningElement {
 			this.certificationId = selectedCertificationObj[1];
 			this.certificationName = selectedCertificationObj[2];
 		}
+	}
+
+	handleLoading() {
+		this.loading = true;
+	}
+	handleDoneLoading() {
+		this.loading = false;
 	}
 
 	get studentBrowserView() {

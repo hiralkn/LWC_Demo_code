@@ -1,5 +1,5 @@
 <template>
-	<span onshowmodal={handleShowModal}>
+	<span onshowmodal={handleShowModal} onloading={handleLoading} ondoneloading={handleDoneLoading}>
 		<c-modal header={modalHeader}>
 			{modalContent}
 		<div slot="footer">
@@ -10,6 +10,10 @@
 			></lightning-button>
 		</div>
 		</c-modal>
+		<template lwc:if={loading}>
+			<lightning-spinner alternative-text="Loading"></lightning-spinner>
+		</template>
+		
 
 		<lightning-layout horizontal-align="space" multiple-rows>
 
@@ -27,7 +31,7 @@
 			</template>
 
 			<template lwc:elseif={tripReportView}>
-				<lightning-layout-item  padding="around-small" size="10">
+				<lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="9" large-device-size="10">
 					<c-trip-reports></c-trip-reports>
 				</lightning-layout-item>
 			</template>
