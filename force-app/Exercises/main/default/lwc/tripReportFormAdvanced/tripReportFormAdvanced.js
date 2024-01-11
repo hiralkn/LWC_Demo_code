@@ -27,7 +27,6 @@ const fieldsToLoad = [FIELD_DATE, FIELD_INSTRUCTOR, FIELD_NAME, FIELD_RATING, FI
 export default class TripReportFormAdvanced extends LightningElement {
 
 	error;
-	_editorInitialized;
 
 	@api recordId;
 	
@@ -124,6 +123,10 @@ export default class TripReportFormAdvanced extends LightningElement {
 
 	onBlur() {
 		this.saveButtonDisabled = !this.validateFields();
+	}
+
+	onCancel() {
+		this.returnToBrowseMode();
 	}
 
 	returnToBrowseMode() {
