@@ -36,6 +36,15 @@
                 <componentName>challenge_recentDeliveries</componentName>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance><identifier>Id1005</identifier>
+                <componentInstanceProperties>
+                    <name>analyticsUrl</name>
+                    <value>https://lwcdata.herokuapp.com/jsondata</value>
+                </componentInstanceProperties>
+                <componentName>challenge_lineChart</componentName>
+            </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         <name>sidebar</name>
         <type>Region</type>
