@@ -13,6 +13,7 @@ import FIELD_Email from '@salesforce/schema/Contact.Email';
 import FIELD_Phone from '@salesforce/schema/Contact.Phone';
 const fields = [FIELD_Name, FIELD_Description, FIELD_Email, FIELD_Phone];
 
+import { refreshApex } from '@salesforce/apex';
 import getCoursesAttended from '@salesforce/apex/StudentDetail.getCoursesAttended';
 
 export default class StudentDetail extends NavigationMixin(LightningElement) {
@@ -20,6 +21,7 @@ export default class StudentDetail extends NavigationMixin(LightningElement) {
 	studentId;
 	subscription;
 	history;
+	_wiredAttendanceResult;
 
 	@wire(MessageContext) messageContext;
 
@@ -28,6 +30,7 @@ export default class StudentDetail extends NavigationMixin(LightningElement) {
 
 	@wire(getCoursesAttended, {contactId: '$studentId'})
 	wired_getCoursesAttended(result) {
+		this._wiredAttendanceResult = result;
 		let data = result.data;
 		let error = result.error;
 		this.history = [];
@@ -93,7 +96,7 @@ export default class StudentDetail extends NavigationMixin(LightningElement) {
 
 	get hasNoHistory() {
 		return !(this.history && this.history.length > 0);
-	}
+	}	
 
 	handleStudentChange(message) {
 		this.studentId = message.studentId;
@@ -107,6 +110,10 @@ export default class StudentDetail extends NavigationMixin(LightningElement) {
 				actionName: 'view'
 			},
 		});
+	}
+
+	onNotesUpdated() {
+		refreshApex(this._wiredAttendanceResult);
 	}
 	
 }

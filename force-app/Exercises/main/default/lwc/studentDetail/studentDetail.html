@@ -20,18 +20,15 @@
 			</template>
 			
 		</lightning-card>
-		
-		<div lwc:if={wiredStudent.data} class="slds-var-m-vertical_small  history">
+
+		<div lwc:if={wiredStudent.data} class="slds-var-m-vertical_small history">
 			<lightning-tabset>
 				<lightning-tab label="History">
-					<template lwc:if={hasNoHistory}>
-						The student has not registered for any courses.
-					</template>
+					<c-student-history history={history}></c-student-history>
 				</lightning-tab>
 				<lightning-tab lwc:if={hasHistory} label="Edit Notes">
-					<c-student-note-editor history={history}></c-student-note-editor>
+					<c-student-note-editor history={history} onnotesupdated={onNotesUpdated}></c-student-note-editor>
 				</lightning-tab>
 			</lightning-tabset>
 		</div>
-
 </template>

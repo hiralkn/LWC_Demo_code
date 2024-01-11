@@ -78,6 +78,7 @@ export default class StudentNoteEditor extends LightningElement {
 		updateRecord(recordInput)
 			.then(() => {
 				Utils.showToast(this,'Success', 'Notes updated', 'success');
+				this.dispatchEvent(new CustomEvent('notesupdated'));
 			})
 			.catch(error => {
 				let errors = reduceErrors(error);

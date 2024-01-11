@@ -1,0 +1,17 @@
+<template>
+    <template lwc:if={hasHistory}>
+        <ul class="slds-has-dividers_bottom-space slds-var-p-horizontal_small">
+            <template for:each={history} for:item="course" for:index="idx">
+                <lightning-tile label={course.label} key={course.courseAttendeeId} type="media" class="slds-tile_board" >
+                    <lightning-icon icon-name="standard:record" slot="media"></lightning-icon>
+                    <lightning-formatted-rich-text value={course.instructorNotes}></lightning-formatted-rich-text>
+                </lightning-tile>
+            </template>
+        </ul>
+    </template>
+    <template lwc:else>
+        <div class="slds-var-p-around_small">
+            This student has not registered for any courses.
+        </div>
+    </template>
+</template>
