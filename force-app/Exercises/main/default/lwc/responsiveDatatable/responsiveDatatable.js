@@ -1,4 +1,6 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api,track } from 'lwc';
+
+const PAGE_SIZE = 5;
 
 export default class ResponsiveDatatable extends LightningElement {
 	
@@ -6,7 +8,17 @@ export default class ResponsiveDatatable extends LightningElement {
 	@api pkField;
 	rows;
 	_selectedRow;
+	currentPage = 1;
+     totalRecords = 0;
+  @track pages = [];
+  @track displayedData = [];
 
+  connectedCallback() {
+    
+    this.fetchData();
+  }
+
+  
 	@api
 	get rowData() {
 		return this.rows;
@@ -83,6 +95,40 @@ export default class ResponsiveDatatable extends LightningElement {
 		target.classList.add("slds-is-selected");
 		this._selectedRow = target;
 	}
+
+	fetchData() {
+		this.totalRecords = this.rows.length;
+	
+		// Calculate total number of pages
+		const totalPages = Math.ceil(this.totalRecords / PAGE_SIZE);
+		this.pages = [];
+		for (let i = 1; i <= totalPages; i++) {
+		  this.pages.push({ number: i, key: i });
+	  }
+	  const startIndex = (this.currentPage - 1) * PAGE_SIZE;
+		const endIndex = startIndex + PAGE_SIZE;
+		this.displayedData = this.rows.slice(startIndex, endIndex);
+	  }
+
+	previousPage() {
+		if (this.currentPage > 1) {
+		  this.currentPage--;
+		  this.fetchData();
+		}
+	  }
+	
+	  nextPage() {
+		if (this.currentPage < this.pages.length) {
+		  this.currentPage++;
+		  this.fetchData();
+		}
+	  }
+	
+	  gotoPage(event) {
+		const pageNumber = event.target.innerText;
+		this.currentPage = parseInt(pageNumber);
+		this.fetchData();
+	  }
 
 	
 	

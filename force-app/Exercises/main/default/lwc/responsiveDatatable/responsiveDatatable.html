@@ -1,4 +1,6 @@
 <template>
+	<lightning-card variant="Narrow" title="Create a Data Table with Pagination using Lightning Web Components in Salesforce">
+		
 	<table class="slds-table slds-table_bordered slds-max-medium-table_stacked">
 		<thead>
 			<tr class="slds-text-heading_label">
@@ -8,7 +10,7 @@
 			</tr>
 		</thead>
 		<tbody lwc:if={rows}>
-			<template for:each={rows} for:item="row" for:index="idx">
+			<template for:each={displayedData} for:item="row" for:index="idx">
 				<tr class="slds-hint-parent" data-pk={row.pk} key={row.pk} onclick={onRowClick} ondblclick={onRowDblClick}>
 					<template for:each={row.data} for:item="colData">
 						<td class={colData.class} data-label={colData.label} key={colData.columnId}>
@@ -29,4 +31,26 @@
 			</template>
 		</tbody>
 	</table>
+
+	<footer slot="footer" style="text-align: center">
+		<ul>
+			<li class="slds-button slds-button_icon page-item" key={previousKey} onclick={previousPage}>
+				<a class="slds-button__icon" href="javascript:void(0);" aria-label="Previous">
+					<lightning-icon icon-name="utility:left" size="x-small"></lightning-icon>
+				</a>
+			</li>
+			<template for:each={pages} for:item="page">
+				<li class="slds-button slds-button_icon page-item" key={page.key} onclick={gotoPage}>
+					<a class="slds-button__icon" href="javascript:void(0);">{page.number}</a>
+				</li>
+			</template>
+			<li class="slds-button slds-button_icon page-item" key={nextKey} onclick={nextPage}>
+				<a class="slds-button__icon" href="javascript:void(0);" aria-label="Next">
+					<lightning-icon icon-name="utility:right" size="x-small"></lightning-icon>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+</lightning-card>
 </template>
