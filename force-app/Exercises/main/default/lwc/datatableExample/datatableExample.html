@@ -1,0 +1,15 @@
+<template>
+    
+    <lightning-card title="Datatable properties">
+    <lightning-button label="Edit" onclick={handleButtonClick} slot="actions"></lightning-button>
+    <div style="height: 500px">
+    <lightning-datatable
+        data={data}
+        columns={columns}
+        key-field="Id"
+        onrowselection={getSelectedName} onsave={handleSave}  >
+    </lightning-datatable>
+    </div>
+</lightning-card>
+
+</template>
