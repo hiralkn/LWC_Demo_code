@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 702,
+    "serverMaxRevisionCounter": 749,
     "sourceMembers": {
         "ListView__Account.AllAccounts": {
             "serverRevisionCounter": 261,
@@ -356,7 +356,7 @@
             "isNameObsolete": false
         },
         "Profile__Admin": {
-            "serverRevisionCounter": 694,
+            "serverRevisionCounter": 739,
             "lastRetrievedFromServer": 306,
             "memberType": "Profile",
             "isNameObsolete": false
@@ -1870,6 +1870,72 @@
         "LightningComponentResource__datatableInfiniteScrolling/datatableInfiniteScrolling.js": {
             "serverRevisionCounter": 698,
             "lastRetrievedFromServer": 698,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "ApexClass__AccountController": {
+            "serverRevisionCounter": 728,
+            "lastRetrievedFromServer": 728,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "LightningComponentBundle__myCustomTypeDatatable": {
+            "serverRevisionCounter": 740,
+            "lastRetrievedFromServer": 740,
+            "memberType": "LightningComponentBundle",
+            "isNameObsolete": false
+        },
+        "LightningComponentBundle__myDatatable": {
+            "serverRevisionCounter": 746,
+            "lastRetrievedFromServer": 746,
+            "memberType": "LightningComponentBundle",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myDatatable/myDatatable.js": {
+            "serverRevisionCounter": 747,
+            "lastRetrievedFromServer": 747,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myDatatable/myDatatable.js-meta.xml": {
+            "serverRevisionCounter": 748,
+            "lastRetrievedFromServer": 748,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myDatatable/myDatatable.html": {
+            "serverRevisionCounter": 749,
+            "lastRetrievedFromServer": 749,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myCustomTypeDatatable/myCustomTypeDatatable.js-meta.xml": {
+            "serverRevisionCounter": 741,
+            "lastRetrievedFromServer": 741,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myCustomTypeDatatable/myCustomTypeDatatable.js": {
+            "serverRevisionCounter": 742,
+            "lastRetrievedFromServer": 742,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myCustomTypeDatatable/myCustomTypeDatatable.html": {
+            "serverRevisionCounter": 743,
+            "lastRetrievedFromServer": 743,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myCustomTypeDatatable/customName.html": {
+            "serverRevisionCounter": 744,
+            "lastRetrievedFromServer": 744,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__myCustomTypeDatatable/customNumber.html": {
+            "serverRevisionCounter": 745,
+            "lastRetrievedFromServer": 745,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         }
