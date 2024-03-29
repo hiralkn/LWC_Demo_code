@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 766,
+    "serverMaxRevisionCounter": 841,
     "sourceMembers": {
         "ListView__Account.AllAccounts": {
             "serverRevisionCounter": 261,
@@ -824,7 +824,7 @@
             "isNameObsolete": false
         },
         "FlexiPage__Account_Record_Page": {
-            "serverRevisionCounter": 283,
+            "serverRevisionCounter": 825,
             "lastRetrievedFromServer": 283,
             "memberType": "FlexiPage",
             "isNameObsolete": false
@@ -1936,6 +1936,30 @@
         "LightningComponentResource__myCustomTypeDatatable/customNumber.html": {
             "serverRevisionCounter": 745,
             "lastRetrievedFromServer": 745,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentBundle__demoRefreshEvent": {
+            "serverRevisionCounter": 838,
+            "lastRetrievedFromServer": 838,
+            "memberType": "LightningComponentBundle",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__demoRefreshEvent/demoRefreshEvent.js": {
+            "serverRevisionCounter": 839,
+            "lastRetrievedFromServer": 839,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__demoRefreshEvent/demoRefreshEvent.js-meta.xml": {
+            "serverRevisionCounter": 840,
+            "lastRetrievedFromServer": 840,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__demoRefreshEvent/demoRefreshEvent.html": {
+            "serverRevisionCounter": 841,
+            "lastRetrievedFromServer": 841,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         }
