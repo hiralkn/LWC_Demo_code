@@ -29,8 +29,8 @@ export default class LayoutManager extends LightningElement {
 	handleShowModal(event) {
 		this.modalHeader = event.detail.header;
 		this.modalContent = event.detail.content;
-		const modal = this.template.querySelector('c-modal');
-		modal.show();
+		const modal = this.template.querySelector('c-create-lightning-modal');
+		modal.open(modalHeader,modalContent);
 	}
 
 	closeModal() {

@@ -1,6 +1,6 @@
 <template>
 	<span onshowmodal={handleShowModal} onloading={handleLoading} ondoneloading={handleDoneLoading}>
-		<c-modal header={modalHeader}>
+		<!-- <c-modal header={modalHeader}>
 			{modalContent}
 		<div slot="footer">
 			<lightning-button
@@ -9,7 +9,8 @@
 				onclick={closeModal}
 			></lightning-button>
 		</div>
-		</c-modal>
+		</c-modal> -->
+		<c-create-lightning-modal label={modalHeader} content={modalContent}></c-create-lightning-modal>
 		<template lwc:if={loading}>
 			<lightning-spinner alternative-text="Loading"></lightning-spinner>
 		</template>

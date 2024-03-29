@@ -5,6 +5,7 @@ import deleteStudentCertification from
 import { refreshApex } from '@salesforce/apex';
 import Utils from 'c/utils';
 import LABEL_FEATURE_NOT_AVAILABLE from '@salesforce/label/c.Feature_Not_Available';
+import myModal from 'c/createLightningModal';
 
 export default class CertifiedStudentList extends LightningElement {
 
@@ -99,6 +100,7 @@ export default class CertifiedStudentList extends LightningElement {
 
     notAvailable() {
         Utils.showModal(this,'Not Available', LABEL_FEATURE_NOT_AVAILABLE);
+        myModal.open();
     }
     
 }

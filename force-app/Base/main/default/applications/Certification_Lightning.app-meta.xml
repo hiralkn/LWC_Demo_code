@@ -18,11 +18,14 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Certification</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>AwInstructors</tabs>
     <tabs>AwInstructors_Cmp_Tab</tabs>
+    <tabs>Examples</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>Certification__c</tabs>
