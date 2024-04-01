@@ -47,4 +47,16 @@ export default class MyDatatable extends LightningElement {
       });
     }
   }
+
+  handleRowSelection(event) {
+    console.log('Handle row selection fired')
+    const itemSelected = new CustomEvent("itemselected", {
+        detail: {
+            recordId: event.detail.selectedRows[0].Id,
+            accountName: event.detail.selectedRows[0].Name
+        }
+    });
+    this.dispatchEvent(itemSelected);
+}
+
 }

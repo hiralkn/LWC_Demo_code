@@ -1,0 +1,15 @@
+<template>
+    <template for:each={studentList} for:item="student" for:index="idx">
+        <div key={student.Id}>
+          {idx}. {student.Name}
+        </div>
+      </template>
+      <template iterator:it={studentList}>
+        <div key={it.value.Id}>
+          <div if:true={it.first} class="list-first"></div>
+            {it.index}. {it.value.Name}<br/>
+          <div if:true={it.last} class="list-last"></div>
+       </div>
+      </template>   
+    
+</template>

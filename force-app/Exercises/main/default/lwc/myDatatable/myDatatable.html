@@ -1,10 +1,13 @@
 
 <template>
-    <lightning-card title="Custom datatypes in lightning datatable">
+    <lightning-card title="Custom datatypes in lightning datatable, I am DI souce as well..">
     <c-my-custom-type-datatable    
       key-field="Id"
       data={accounts}
-      columns={columns}        
+      columns={columns}  
+      max-row-selection="1"
+                onrowselection={handleRowSelection}
+           
     >
     </c-my-custom-type-datatable>
 </lightning-card>
