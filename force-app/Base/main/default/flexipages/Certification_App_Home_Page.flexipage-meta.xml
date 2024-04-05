@@ -2,8 +2,9 @@
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance><identifier>Id1001</identifier>
+            <componentInstance>
                 <componentName>challenge_contactDirectory</componentName>
+                <identifier>Id1001</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -12,8 +13,9 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance><identifier>Id1002</identifier>
+            <componentInstance>
                 <componentName>propsDemo</componentName>
+                <identifier>Id1002</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -22,8 +24,9 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance><identifier>Id1003</identifier>
+            <componentInstance>
                 <componentName>challenge_currentDateTime</componentName>
+                <identifier>Id1003</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -32,17 +35,19 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <componentInstance><identifier>Id1004</identifier>
+            <componentInstance>
                 <componentName>challenge_recentDeliveries</componentName>
+                <identifier>Id1004</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
-            <componentInstance><identifier>Id1005</identifier>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>analyticsUrl</name>
                     <value>https://lwcdata.herokuapp.com/jsondata</value>
                 </componentInstanceProperties>
                 <componentName>challenge_lineChart</componentName>
+                <identifier>Id1005</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

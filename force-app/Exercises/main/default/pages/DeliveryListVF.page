@@ -5,11 +5,11 @@
     </div>
 
     <!-- TODO #1: load the Lightning Components for Visualforce JavaScript library. -->
-    <apex:includeLightning/>
+    <apex:includeLightning />
 
-    <apex:pageBlock>
-        <apex:pageBlockSection>
-            <apex:pageBlockSectionItem>
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
                 <!-- TODO #2: add a div that will hold the map once it has been created. -->
                 <div id="mapDiv" />
             </apex:pageBlockSectionItem>

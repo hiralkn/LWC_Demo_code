@@ -8,4 +8,4 @@ export default class challenge_CourseDeliveryForm extends LightningElement {
 	@api objectApiName;
 	fields = [LOCATION_FIELD, REGION_FIELD];
 	
-} 
+}

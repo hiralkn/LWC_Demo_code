@@ -1,4 +1,3 @@
-
 import { LightningElement, wire, track } from "lwc";
 import getAccountList from "@salesforce/apex/AccountController.getAccountList";
 
