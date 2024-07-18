@@ -53,6 +53,12 @@ handleStudentSelected(event){
             </div>
         </lightning-tab>
 
+**Extension-9 - Dynamic Interaction** -- Uses following components and controller. Need some configuration from App builder. refer https://www.forcetrails.com/2021/08/publish-lwc-events-to-lightning-app-builder.html   for information regarding configuration steps. Put myDatatable(source) and contactListDI (target) on app page. select one account from myDatatable , it will show related contacts in contactListDI component.
+
+(i) myDatatable--source component which fires event for dynamic interaction. 
+(ii) AccountController -- Apex controller to retrieve both accounts and contacts data. 
+(iii) contactListDI--target component for dynamic interaction. 
+(iv) myCustomTypeDatatable -- example of creating custom datatypes and using in lightning datatable. myDatatable.js uses custom types from  myCustomTypeDatatable  in column configuration.
 
 
 
