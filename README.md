@@ -60,6 +60,10 @@ handleStudentSelected(event){
 (iii) contactListDI--target component for dynamic interaction. 
 (iv) myCustomTypeDatatable -- example of creating custom datatypes and using in lightning datatable. myDatatable.js uses custom types from  myCustomTypeDatatable  in column configuration.
 
+**Extension-15 - Graphql** -- recentDeliveriesGraphql component , put on the home page and check the output
+**Extension-16 - Refreshview API** -- demoRefreshEvent component. When we put this component on the Account record page and create a  new contact record , RefreshEvent is dispatched  by this component and the standard view automatically gets refreshed. custom components don't get refreshed automatically ,we need to provide refreshhandler.
+
+
 
 
 
